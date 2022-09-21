@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+
+:root {
+  --gradient: linear-gradient(90deg, #f1c40f, #f39c12);
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+html::-webkit-scrollbar {
+  width: 1.5rem;
+}
+html::-webkit-scrollbar-track {
+  background: #333;
+}
+html::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #f1c40f, #f39c12);
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  padding: 1.5rem 7%;
+  background: var(--gradient);
+  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
+}
+header .logo {
+    font-size: 2.5rem;
+    color: #fff;
+}
+header .navbar ul{
+    
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+header .navbar ul li {
+    margin: 0 1rem;
+}
+header .navbar ul li a {
+    color: #fff;
+    font-size: 2rem;
+}
+header .navbar ul li a.active,
+header .navbar ul li a:hover{
+    color: #444;
+}
+header #login{
+    cursor: pointer;
+    font-size: 3rem;
+    color: #fff;
+}
+header #login:hover{
+    color: #444;
+}
+header #menu {
+    color: #fff;
+    font-size: 3rem;
+    display: none;
+}
+
+/* media queries */
+@media (max-width:768px) {
+    html {
+        font-size: 55%;
+    }
+    header #menu{
+        display: block;
+    }
+    header .navbar{
+        position: fixed;
+        left: 0;
+        top: -120%;
+        background: #444;
+        width: 100%;
+    }
+    header .navbar ul {
+        padding: 2rem 0;
+        flex-flow: column;
+    }
+    header .navbar ul li {
+        margin: 1.5rem 0 ;
+        text-align: center;
+        width: 100%;
+    }
+    header .navbar ul li a {
+        font-size: 2.5rem;
+        display: block;
+    }
+    header .navbar ul li a.active,
+header .navbar ul li a:hover{
+    color: #f39c12;
+}
+}
