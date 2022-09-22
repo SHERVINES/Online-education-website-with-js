@@ -28,6 +28,16 @@ html::-webkit-scrollbar-track {
 html::-webkit-scrollbar-thumb {
   background: linear-gradient(90deg, #f1c40f, #f39c12);
 }
+.btn {
+  padding: 0.7rem 3rem;
+  font-size: 2rem;
+  color: #fff;
+  background: var(--gradient);
+  border-radius: 5rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
+}
 header {
   display: flex;
   align-items: center;
@@ -42,79 +52,163 @@ header {
   box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
 }
 header .logo {
-    font-size: 2.5rem;
-    color: #fff;
+  font-size: 2.5rem;
+  color: #fff;
 }
-header .navbar ul{
-    
+header .navbar ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
   list-style: none;
 }
 header .navbar ul li {
-    margin: 0 1rem;
+  margin: 0 1rem;
 }
 header .navbar ul li a {
-    color: #fff;
-    font-size: 2rem;
+  color: #fff;
+  font-size: 2rem;
 }
 header .navbar ul li a.active,
-header .navbar ul li a:hover{
-    color: #444;
+header .navbar ul li a:hover {
+  color: #444;
 }
-header #login{
-    cursor: pointer;
-    font-size: 3rem;
-    color: #fff;
+header #login {
+  cursor: pointer;
+  font-size: 3rem;
+  color: #fff;
 }
-header #login:hover{
-    color: #444;
+header #login:hover {
+  color: #444;
 }
 header #menu {
-    color: #fff;
-    font-size: 3rem;
-    display: none;
+  color: #fff;
+  font-size: 3rem;
+  display: none;
 }
 
+.login-form {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: -120%;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.login-form.popup{
+  top: 0;
+}
+.login-form form {
+  width: 35rem;
+  background: #fff;
+  margin: 0 2rem;
+  padding: 1rem 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.1rem 0.3rem #333;
+  position: relative;
+}
+
+.login-form form h3 {
+  font-size: 3rem;
+  color: #f39c12;
+  padding: 1rem 0;
+}
+.login-form form .box {
+  width: 100%;
+  padding: 1rem 0;
+  margin: 1rem 0;
+  font-size: 1.6rem;
+  color: #333;
+  border-bottom: 0.2rem solid #666;
+  text-transform: none;
+}
+.login-form form .box::placeholder {
+  text-transform: capitalize;
+}
+
+.login-form form .box:focus {
+  border-color: #f39c12;
+}
+
+.login-form form .box:nth-child(3) {
+  margin-bottom: 5rem;
+}
+
+.login-form form p {
+  font-size: 1.4rem;
+  color: #666;
+  padding: 0.5rem 0;
+}
+
+.login-form form p a {
+  color: #f39c12;
+}
+.login-form form p a:hover {
+  text-decoration: underline;
+}
+.login-form form .btn {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.login-form form .btn:hover {
+  background: #444;
+}
+.login-form form .fa-times {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 2.5rem;
+  color: #999;
+  cursor: pointer;
+}
+.login-form form .fa-times:hover {
+  color: #444;
+}
 /* media queries */
-@media (max-width:768px) {
-    html {
-        font-size: 55%;
-    }
-    header #menu{
-        display: block;
-    }
-    header .navbar{
-        position: fixed;
-        left: 0;
-        top: -120%;
-        background: #444;
-        width: 100%;
-    }
-    header .navbar ul {
-        padding: 2rem 0;
-        flex-flow: column;
-    }
-    header .navbar ul li {
-        margin: 1.5rem 0 ;
-        text-align: center;
-        width: 100%;
-    }
-    header .navbar ul li a {
-        font-size: 2.5rem;
-        display: block;
-    }
-    header .navbar ul li a.active,
-header .navbar ul li a:hover{
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+  header #menu {
+    display: block;
+  }
+  header .navbar {
+    position: fixed;
+    left: 0;
+    top: -120%;
+    background: #444;
+    width: 100%;
+  }
+  header .navbar ul {
+    padding: 2rem 0;
+    flex-flow: column;
+  }
+  header .navbar ul li {
+    margin: 1.5rem 0;
+    text-align: center;
+    width: 100%;
+  }
+  header .navbar ul li a {
+    font-size: 2.5rem;
+    display: block;
+  }
+  header .navbar ul li a.active,
+  header .navbar ul li a:hover {
     color: #f39c12;
-}
-.fa-times{
+  }
+  .fa-times {
     transform: rotate(180deg);
-
+  }
+  header .navbar.nav-toggle {
+    top: 6.4rem;
+  }
 }
-header .navbar.nav-toggle{
-    top:6.4rem;
-
-}
+@media (max-width: 500px) {
+  html {
+    font-size: 50%;
+  }
 }
