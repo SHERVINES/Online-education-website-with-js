@@ -324,6 +324,19 @@ header #menu {
   color: #fff;
   font-size: 3rem;
 }
+.teacher {
+  text-align: center;
+  background: url(./img/teachers.jfif) no-repeat;
+  background-size: cover;
+  background-position: bottom;
+
+}
+.teacher p {
+  font-size: 1.8rem;
+  color: #666;
+  margin: 1rem auto;
+  width: 65rem;
+}
 
 @keyframes animate {
   0% {
@@ -376,6 +389,9 @@ header #menu {
     font-size: 4rem;
   }
   .home p {
+    width: auto;
+  }
+  .teacher p {
     width: auto;
   }
 }
