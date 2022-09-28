@@ -389,6 +389,54 @@ header #menu {
   height: 80vh;
   margin-top: 2rem;
 }
+.footer {
+  background: #333;
+}
+.footer .box-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.footer .box-container .box {
+  margin: 1.5rem;
+  flex: 1 1 25rem;
+  text-align: center;
+}
+.footer .box-container .box h3 {
+  font-size: 2.5rem;
+  color: #fff;
+  padding: 1rem 0;
+}
+.footer .box-container .box p {
+  font-size: 1.7rem;
+  color: #eee;
+  padding: 0.7rem 0;
+  text-transform: none;
+}
+.footer .box-container .box p i {
+  padding-right: 0.5rem;
+  color: #f39c12;
+}
+.footer .box-container .box a {
+  font-size: 1.8rem;
+  padding: 0.5rem 0;
+  display: block;
+  color: #eee;
+}
+.footer .box-container .box a:hover {
+  text-decoration: underline;
+  font-size: normal;
+}
+.footer .credit {
+  padding: 2rem 1rem;
+  font-size: 2rem;
+  color: #fff;
+  background: #111;
+  text-align: center;
+}
+.footer .credit a {
+  color: #f39c12;
+}
 @keyframes animate {
   0% {
     background-position-x: 0rem;
